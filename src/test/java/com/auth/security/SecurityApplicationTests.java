@@ -1,10 +1,10 @@
-package com.safeceylon.safeceylon;
+package com.auth.security;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SafeCeylonApplicationTests {
+class SecurityApplicationTests {
 
 	@Test
 	void contextLoads() {
