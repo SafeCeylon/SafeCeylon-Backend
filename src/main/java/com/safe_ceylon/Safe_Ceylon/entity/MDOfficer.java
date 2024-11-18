@@ -17,6 +17,8 @@ public class MDOfficer {
 
     @Id
     private Long empNumber;
+
+
     @Column(nullable = false , unique = true)
     private String nicNumber;
 
