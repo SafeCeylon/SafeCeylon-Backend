@@ -8,6 +8,9 @@ import com.safe_ceylon.Safe_Ceylon.service.interfac.MDOfficerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Service
 public class MDOfficerServiceIMPL implements MDOfficerService {
@@ -62,5 +65,28 @@ public class MDOfficerServiceIMPL implements MDOfficerService {
         }else {
             throw new RuntimeException("No data found");
         }
+    }
+
+    @Override
+    public List<MDOfficerDTO> getAllOfficers() {
+
+        List<MDOfficer> getAllOfficers = mdofficerRepo.findAll();
+        List<MDOfficerDTO> officerDTOList = new ArrayList<>();
+
+        for(MDOfficer mdOfficer : getAllOfficers) {
+
+            MDOfficerDTO mdofficerDTO = new MDOfficerDTO (
+
+                    mdOfficer.getEmpNumber(),
+                    mdOfficer.getNicNumber(),
+                    mdOfficer.getFirstName(),
+                    mdOfficer.getLastName(),
+                    mdOfficer.getEmail(),
+                    mdOfficer.getContactNumber(),
+                    mdOfficer.getOfficerPhotoUrl()
+            );
+            officerDTOList.add(mdofficerDTO);
+        }
+        return officerDTOList;
     }
 }

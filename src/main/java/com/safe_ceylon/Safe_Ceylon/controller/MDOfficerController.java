@@ -7,6 +7,8 @@ import com.safe_ceylon.Safe_Ceylon.service.interfac.MDOfficerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/v1/mdofficer")
 @CrossOrigin
@@ -35,6 +37,15 @@ public class MDOfficerController {
         mdofficerService.deleteMdofficer(empNumber);
         return "DELETED";
 
+    }
+
+    @GetMapping(
+            path = "/get-all-officers"
+    )
+
+    public List<MDOfficerDTO> getAllOfficers(){
+        List<MDOfficerDTO> allOfficers = mdofficerService.getAllOfficers();
+        return allOfficers;
     }
 
 
