@@ -16,6 +16,8 @@ public class DvictimDTO {
 
     private int Dv_id;
 
+    private String Dv_name;
+
     private int Shelter_id;
 
     private String D_type;
