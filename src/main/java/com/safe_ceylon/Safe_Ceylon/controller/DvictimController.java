@@ -23,6 +23,12 @@ public class DvictimController {
         return "SAVED";
     }
 
+    @PutMapping("/update")
+    public String updateDvictim(@RequestBody DvictimDTO dvictimDTO) {
+        dvictimService.updateDvictim(dvictimDTO);
+        return "UPDATED";
+    }
+
 
 
 

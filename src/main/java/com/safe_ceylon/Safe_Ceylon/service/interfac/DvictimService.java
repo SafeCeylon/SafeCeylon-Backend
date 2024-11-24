@@ -4,4 +4,6 @@ import com.safe_ceylon.Safe_Ceylon.dto.DvictimDTO;
 
 public interface DvictimService {
     String saveDvictim(DvictimDTO dvictimDTO);
+
+    String updateDvictim(DvictimDTO dvictimDTO);
 }

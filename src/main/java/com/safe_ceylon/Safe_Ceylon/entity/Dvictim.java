@@ -22,6 +22,9 @@ public class Dvictim {
     private int Dv_id;
 
     @Column(nullable = false)
+    private String Dv_name;
+
+    @Column(nullable = false)
     private int Shelter_id;
 
     @Column(nullable = false)
