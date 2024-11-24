@@ -25,7 +25,7 @@ public class DvictimServiceIMPL implements DvictimService {
                 dvictimDTO.getRecord_date()
         );
         dvictimRepo.save(dvictim);
-        return "";
+        return "Successfully Saved";
     }
 
     @Override
