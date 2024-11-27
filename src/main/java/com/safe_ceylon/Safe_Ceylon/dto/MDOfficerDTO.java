@@ -26,5 +26,5 @@ public class MDOfficerDTO {
     private String contactNumber;
 
 
-    private String officerPhotoUrl;
+   // private String officerPhotoUrl;
 }

@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface MDOfficerService {
 
-    public String saveMdofficer(MDOfficerDTO mdOfficerDTO);
+     String saveMdofficer(MDOfficerDTO mdOfficerDTO);
 
-    public String updateMdofficer(MDOfficerDTO mdOfficerDTO);
+    /* String updateMdofficer(MDOfficerDTO mdOfficerDTO);
 
     String deleteMdofficer(Long empNumber);
 
-    List<MDOfficerDTO> getAllOfficers();
+    List<MDOfficerDTO> getAllOfficers();*/
 }

@@ -29,14 +29,14 @@ public class MDOfficerServiceIMPL implements MDOfficerService {
                 mdOfficerDTO.getFirstName(),
                 mdOfficerDTO.getLastName(),
                 mdOfficerDTO.getEmail(),
-                mdOfficerDTO.getContactNumber(),
-                mdOfficerDTO.getOfficerPhotoUrl()
+                mdOfficerDTO.getContactNumber()
+              //  mdOfficerDTO.getOfficerPhotoUrl()
         );
         mdofficerRepo.save(mdOfficer);
-        return "Successfully Saved";
+        return mdOfficerDTO.getFirstName() +  "Successfully Saved";
 
     }
-
+/*
     @Override
     public String updateMdofficer(MDOfficerDTO mdOfficerDTO) {
 
@@ -47,7 +47,7 @@ public class MDOfficerServiceIMPL implements MDOfficerService {
             mdOfficer.setEmail(mdOfficerDTO.getEmail());
             mdOfficer.setContactNumber(mdOfficerDTO.getContactNumber());
             mdOfficer.setNicNumber(mdOfficerDTO.getNicNumber());
-            mdOfficer.setOfficerPhotoUrl(mdOfficerDTO.getEmail());
+           // mdOfficer.setOfficerPhotoUrl(mdOfficerDTO.getEmail());
             mdofficerRepo.save(mdOfficer);
 
             return mdOfficerDTO.getFirstName() + " Update Success";
@@ -82,11 +82,14 @@ public class MDOfficerServiceIMPL implements MDOfficerService {
                     mdOfficer.getFirstName(),
                     mdOfficer.getLastName(),
                     mdOfficer.getEmail(),
-                    mdOfficer.getContactNumber(),
-                    mdOfficer.getOfficerPhotoUrl()
+                    mdOfficer.getContactNumber()
+                   // mdOfficer.getOfficerPhotoUrl()
             );
             officerDTOList.add(mdofficerDTO);
         }
         return officerDTOList;
+
     }
+    */
+ 
 }

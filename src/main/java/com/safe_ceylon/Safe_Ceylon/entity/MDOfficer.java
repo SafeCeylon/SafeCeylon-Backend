@@ -1,9 +1,6 @@
 package com.safe_ceylon.Safe_Ceylon.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +13,7 @@ import lombok.NoArgsConstructor;
 public class MDOfficer {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long empNumber;
 
 
@@ -34,8 +32,8 @@ public class MDOfficer {
     @Column(nullable = false)
     private String contactNumber;
 
-    @Column(nullable = false)
-    private String officerPhotoUrl;
+   // @Column(nullable = false)
+   // private String officerPhotoUrl;
 
 
 

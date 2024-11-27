@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@ResponseBody
 @RequestMapping("api/v1/mdofficer")
 @CrossOrigin
 
@@ -18,12 +19,15 @@ public class MDOfficerController {
     @Autowired
     private MDOfficerService mdofficerService;
 
-    @PostMapping("/save")
+    @PostMapping (
+
+            path = {"/save "}
+    )
     public String saveMdofficer(@RequestBody MDOfficerDTO mdOfficerDTO) {
         mdofficerService.saveMdofficer(mdOfficerDTO);
         return "SAVED";
     }
-
+/*
     @PutMapping("/update")
     public String updateMdofficer(@RequestBody MDOfficerDTO mdOfficerDTO) {
         mdofficerService.updateMdofficer(mdOfficerDTO);
@@ -50,7 +54,7 @@ public class MDOfficerController {
 
 
 
-
+*/
 
 
 }
